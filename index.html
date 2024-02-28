@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1 style="text-align: center; color: aliceblue;">ATIVIDADE JS - Miguel Rodrigues Carneiro</h1>
+<p style="text-align: center; color: white;">ALUNO: Miguel Rodrigues Carneiro
+    TURMA: P2-B | Noite
+    CURSO: Sistemas Para Internet
+    
+    REQUISITOS DO SISTEMA: 
+    
+    Obtenha d altura e o sexo (M ou F) de 15 pessoas e mostre os seguintes dados:
+    
+    - A maior e a menor altura do grupo;
+    - A média de altura dos homens;
+    - O número de mulheres.</p>
+    <div class="tela">
+    <div class="formulario"></div>
+    <div class="main">
+        <h2>Cadastro De Pessoas</h2>
+        <form method="get" id="formulario">
+
+            <div class="altura_html">
+                <label for="pergunta_altura">Digite sua altura no formato: 1.88:</label>
+                <input style="margin-top: 10px;" type="number" id="pergunta_altura" step=0.01 required>
+            </div>
+
+            <div class="sexo_html">
+                <label for="pergunta_sexo">Qual seu SEXO?!</label>
+                <select style="margin-left: 10px;" id="pergunta_sexo" required>
+
+                    <option value="M">Masculino!</option>
+                    <option value="F">Feminino!</option>
+                </select>
+            </div>
+
+            <button style="margin-top: 20px;" type="submit" onclick="adicionar_pessoa(event)">Cadastrar Pessoa</button>
+        </form>
+    </div>
+
+    <div class="Resultados" id="area_resultados">
+        <h1 style="font-size: 20PX;">RESULTADOS:</h1>
+        <h3 id="resultados"></h3>
+        <p id="pesq_altura_max"></p>
+        <p id="pesq_altura_min"></p>
+        <p id="med_homens"></p>
+        <p id="quantidade_mulheres"></p>
+
+    </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
