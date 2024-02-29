@@ -52,3 +52,35 @@ body {
     color: #ffffff;
     margin: 0 10px; /* Espaçamento entre as divs */
 }
+
+.botao {
+
+    border: 2px solid rgb(50, 146, 235);
+    border-radius: 0px;
+    padding: 10px 36px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+
+.botao:hover {
+
+    background-color: rgb(194, 206, 243);
+}
+
+.pergunta_sexo::after {
+
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+
+}
+
