@@ -70,6 +70,7 @@ function adicionar_pessoa(event) {
 function resultados() {
 
 
+    // Bolo de codico de calculos de Menor altura e Maior altura e Media de altura dos homens
     const max_altura = Math.max(...pergunta_altura);
     const min_altura = Math.min(...pergunta_altura);
 
