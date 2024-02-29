@@ -43,7 +43,9 @@ function adicionar_pessoa(event) {
     pergunta_sexo.push(sexo);
     pergunta_altura.push(altura);
 
-    // LINHA 48 A 54 
+    /* LINHA 50 A 56 Estrutura Condicional para se resposta da Pergunta de sexo for M adicionar uma pessoa em
+     na variavel: quantidade_homens e guarda uma a altura em altura_homens | A mesma coisa para quantidade_mulheres e altura_mulheres.
+    */
 
     if (sexo === 'M') {
         quantidade_homens++;
@@ -53,26 +55,32 @@ function adicionar_pessoa(event) {
         altura_mulheres.push(altura);
     }
 
-    quantidade_pessoas++;
+    quantidade_pessoas++; // adiciona +1 em quantidade de pessoas total
 
-    if (quantidade_pessoas === 2) {
+    // Quando a quantidade de pessoas total for 15 execultará a função resultados
+    if (quantidade_pessoas === 15) {
         resultados();
         quantidade_pessoas = 0;
     }
 }
 
+
+/*  Criação de Função resultados | Operando Calculos de Maior e Menor Altura 
+| Operando calculos para Obter Média de altura dos Homens */
 function resultados() {
 
 
     const max_altura = Math.max(...pergunta_altura);
     const min_altura = Math.min(...pergunta_altura);
+
     const med_homens = altura_homens.reduce((sum, height) => sum + height, 0) / quantidade_homens;
 
 
+    /* Bloco de codigo referente a impresão de resultados quequisitados pelo sistema */
     document.getElementById('resultados').innerText = `Resultado da Pesquisa: `;
     document.getElementById('pesq_altura_max').innerText = `A Maior Altura Dentre as 15 Pessoas foi de: ${max_altura.toFixed(2)} m`;
     document.getElementById('pesq_altura_min').innerText = `A Menor Altura Dentre as 15 Pessoas foi de: ${min_altura.toFixed(2)} m`;
     document.getElementById('med_homens').innerText = `A Média de Altura dos Homens foi de: ${med_homens.toFixed(2)} m`;
     document.getElementById('quantidade_mulheres').innerText = `O Número de Mulheres Total de mulheres foi de: ${quantidade_mulheres}`;
-    document.getElementById('todas_alturas').innerText = {pergunta_altura}
+    document.getElementById('todas_alturas').innerText = { pergunta_altura }
 }
